@@ -67,14 +67,20 @@ const App = () => {
     },
   ]);
   const [title, setTitle] = useState('');
+  const [rating, setRating] = useState(0);
 
   return (
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3">
-          <Filter title={title} setTitle={setTitle} />
+          <Filter
+            title={title}
+            setTitle={setTitle}
+            rating={rating}
+            setRating={setRating}
+          />
           <AddMovie setMovieList={setMovieList} />
-          <MovieList movieList={movieList} title={title} />
+          <MovieList movieList={movieList} title={title} rating={rating} />
         </div>
       </div>
     </div>

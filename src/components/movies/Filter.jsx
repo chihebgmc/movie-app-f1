@@ -1,5 +1,7 @@
+import Rate from './Rate';
+
 const Filter = props => {
-  const { title, setTitle } = props;
+  const { title, setTitle, rating, setRating } = props;
   return (
     <div className="my-5">
       <input
@@ -8,7 +10,7 @@ const Filter = props => {
         onChange={e => setTitle(e.target.value)}
         className="form-control"
       />
-      {/* Rate Components */}
+      <Rate rating={rating} setRating={setRating} />
     </div>
   );
 };
